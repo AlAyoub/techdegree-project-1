@@ -1,7 +1,15 @@
 // FSJS - Random Quote Generator
+var randomQuoteGenerator = Math.floor(Math.random() * 8) + 1;
+
+// Testing my random quote generator
+alert('Random number is ' + randomQuoteGenerator)
 
 // Create the array of quote objects and name it quotes
+var quotes = [
+  
 
+
+]
 
 
 // Create the getRandomQuuote function and name it getRandomQuote
