@@ -1,42 +1,72 @@
 // FSJS - Random Quote Generator
 function randomQuoteGenerator() {
-  var randomNumber = Math.floor(Math.random() * 8) + 1;
+  var randomNumber = Math.floor(Math.random() * 8);
   return randomNumber;
 }
 
 
 // Testing my random quote generator
-alert(randomQuoteGenerator());
+// alert(randomQuoteGenerator());
 
 // Create the array of quote objects and name it quotes
 
 var quotes = [
-  {quote: "Everything you've ever wanted is on the other side of fear."},
-  {quote: "Perhaps the most important principle for the good algorithm designer is to refuse to be content."},
-  {quote: "Whatever the mind of man can conceive and believe, it can achieve."},
-  {quote: "Strive not to be a success, but rather to be of value."},
-  {quote: "You miss 100% of the shots you don't take."},
-  {quote: "The mind is everything. What you think you become."},
-  {quote: "Believe you can and you're halfway there."},
-  {quote: "A person who never made a mistake never tried anything new."}
+  {
+    quote:  "Everything you've ever wanted is on the other side of fear.",
+    source: "Geroge Addair",
+    citation: "",
+    year: ""
+  },
+  {
+    quote:  "Perhaps the most important principle for the good algorithm designer is to refuse to be content.",
+    source: "Alfred V. Aho",
+    citation: "",
+    year: ""
+  },
+  {
+    quote:  "Whatever the mind of man can conceive and believe, it can achieve.",
+    source: "Napoleon Hill",
+    citation: "",
+    year: ""
+  },
+  {
+    quote:  "Strive not to be a success, but rather to be of value.",
+    source: "Albert Einstein",
+    citation: "",
+    year: ""
+  },
+  {
+    quote:  "You miss 100% of the shots you don't take.",
+    source: "Wayne Gretsky",
+    citation: "",
+    year: ""
+  },
+  {
+    quote:  "The mind is everything. What you think you become.",
+    source: "Buddha",
+    citation: "",
+    year: ""
+  },
+  {
+    quote:  "Believe you can and you're halfway there.",
+    source: "Theodore Roosevelt",
+    citation: "",
+    year: ""
+  },
+  {
+    quote:  "A person who never made a mistake never tried anything new.",
+    source: "Albert Einstein",
+    citation: "",
+    year: ""
+  },
 
 ];
 
-var author = [
-  {author: "Geroge Addair"},
-  {author: "Alfred V. Aho"},
-  {author: "Napoleon Hill"},
-  {author: "Albert Einstein"},
-  {author: "Wayne Gretsky"},
-  {author: "Buddha"},
-  {author: "Theodore Roosevelt"},
-  {author: "Albert Einstein"}
 
-
-];
-
-alert(quotes[0]);
-
+// testing my array
+console.log(quotes[0]);
+console.log(quotes[5]);
+console.log(quotes[7]);
 
 
 // Create the getRandomQuuote function and name it getRandomQuote
