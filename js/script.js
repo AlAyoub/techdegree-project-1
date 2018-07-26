@@ -66,11 +66,18 @@ function printQuote() {
   // Calls random quote and stores it in a variable
   var quote = getRandomQuote();
   // Constructs a string containing different properties using html
-  console.log(quote);
 
   //console.log(quote);
   // if/else to handle missing citation or year
-
+  if (quote.citation == undefined && quote.year == undefined) {
+    console.log(quote.quote);
+    console.log(quote.source);
+  } else {
+    console.log(quote.quote);
+    console.log(quote.source);
+    console.log(quote.citation);
+    console.log(quote.year);
+  }
 }
 
 // This event listener will respond to "Show another quote" button clicks
