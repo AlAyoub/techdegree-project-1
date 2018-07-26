@@ -65,20 +65,32 @@ function getRandomQuote(array) {
 function printQuote() {
   // Calls random quote and stores it in a variable
   var quote = getRandomQuote();
-  // Constructs a string containing different properties using html
+  var quoteString;
+
 
   //console.log(quote);
   // if/else to handle missing citation or year
-  if (quote.citation == undefined && quote.year == undefined) {
+  if (quote.citation === undefined && quote.year === undefined) {
+    // console.log(quote.quote);
+    // console.log(quote.source);
+  // Constructs a string containing different properties using html
+    quoteString =  "<p class = 'quote'>" + quote.quote + "</p>";
+    quoteString += "<p class = 'source'>" + quote.source + "</p>";
+    return quoteString;
+  } else if (quote.year === undefined) {
     console.log(quote.quote);
     console.log(quote.source);
+    console.log(quote.citation);
   } else {
     console.log(quote.quote);
     console.log(quote.source);
     console.log(quote.citation);
     console.log(quote.year);
   }
+    document.getElementById('quote-box').innerHTML = quoteString;
+
 }
+
 
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
