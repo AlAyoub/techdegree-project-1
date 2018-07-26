@@ -65,27 +65,21 @@ function getRandomQuote(array) {
 function printQuote() {
   // Calls random quote and stores it in a variable
   var quote = getRandomQuote();
-  var quoteString;
+  var quoteString = "";
 
-
-  //console.log(quote);
   // if/else to handle missing citation or year
   if (quote.citation === undefined && quote.year === undefined) {
-    // console.log(quote.quote);
-    // console.log(quote.source);
-  // Constructs a string containing different properties using html
-    quoteString =  "<p class = 'quote'>" + quote.quote + "</p>";
-    quoteString += "<p class = 'source'>" + quote.source + "</p>";
-    return quoteString;
+    quoteString =  "<p class='quote'>" + quote.quote + "</p>";
+    quoteString += "<p class='source'>" + quote.source + "</p>";
   } else if (quote.year === undefined) {
-    console.log(quote.quote);
-    console.log(quote.source);
-    console.log(quote.citation);
+    quoteString =  "<p class='quote'>" + quote.quote + "</p>";
+    quoteString += "<p class='source'>" + quote.source;
+    quoteString += "<span class='citation'>" + quote.citation + "</span>"+ "</p>";
   } else {
-    console.log(quote.quote);
-    console.log(quote.source);
-    console.log(quote.citation);
-    console.log(quote.year);
+    quoteString =  "<p class='quote'>" + quote.quote + "</p>";
+    quoteString += "<p class='source'>" + quote.source;
+    quoteString += "<span class='citation'>" + quote.citation + "</span>";
+    quoteString += "<span class='year'>" + quote.year + "</span>"+ "</p>";
   }
     document.getElementById('quote-box').innerHTML = quoteString;
 
