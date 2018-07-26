@@ -1,14 +1,16 @@
-// FSJS - Random Quote Generator
+/*
+Created by: Alan Ayoub
+Full Stack Tech Degree Project 1
+Random Quote Generator
+*/
+
+// generates a random number between 0 and 7
 function randomQuoteGenerator() {
   var randomNumber = Math.floor(Math.random() * 8);
   return randomNumber;
 }
 
-
-// Testing my random quote generator
-// alert(randomQuoteGenerator());
-
-// Create the array of quote objects and name it quotes
+// quotes array with objects
 
 var quotes = [
   {
@@ -54,7 +56,8 @@ var quotes = [
 
 ];
 
-// Create the getRandomQuuote function and name it getRandomQuote
+// This function calls our random generator
+// and returns our random number as an integer
 function getRandomQuote(array) {
   var Num = randomQuoteGenerator();
   var getRandomQuote = quotes[Num];
@@ -63,11 +66,11 @@ function getRandomQuote(array) {
 
 // Create the printQuote funtion and name it printQuote
 function printQuote() {
-  // Calls random quote and stores it in a variable
-  var quote = getRandomQuote();
-  var quoteString = "";
 
-  // if/else to handle missing citation or year
+  var quote = getRandomQuote(); // stores the random integer in a new variable 'quote'
+  var quoteString = "";         // create a new variable with an empty string
+
+  // if/else conditions to print out the correct quoteString
   if (quote.citation === undefined && quote.year === undefined) {
     quoteString =  "<p class='quote'>" + quote.quote + "</p>";
     quoteString += "<p class='source'>" + quote.source + "</p>";
@@ -81,10 +84,9 @@ function printQuote() {
     quoteString += "<span class='citation'>" + quote.citation + "</span>";
     quoteString += "<span class='year'>" + quote.year + "</span>"+ "</p>";
   }
+    // Javascript method to display the HTML string
     document.getElementById('quote-box').innerHTML = quoteString;
-
 }
-
 
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
