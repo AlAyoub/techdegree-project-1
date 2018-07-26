@@ -67,12 +67,11 @@ function printQuote() {
   var quote = getRandomQuote();
   // Constructs a string containing different properties using html
   console.log(quote);
+
+  //console.log(quote);
   // if/else to handle missing citation or year
 
 }
-
-printQuote();
-
 
 // This event listener will respond to "Show another quote" button clicks
 // when user clicks anywhere on the button, the "printQuote" function is called
